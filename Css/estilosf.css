@@ -1,0 +1,301 @@
+/* ==========================================
+   RESET Y CONFIGURACIÓN BÁSICA
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que los elementos se desborden */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 1. Busca el 'body' y cámbialo para que tenga un fondo más dinámico */
+body {
+    background-color: #384351; 
+    color: #fcfcfc; 
+    line-height: 1.6;
+    padding: 0 20px; /* Le damos un poco más de margen a los lados */
+}
+
+/* 2. Busca '.contenedor' y cambia el 'max-width' de 800px a 1100px */
+.contenedor {
+    max-width: 1100px; /* ¡Ahora la página respirará y se expandirá más! */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Por defecto una columna */
+    gap: 20px;
+}
+
+/* ==========================================
+   DISEÑO DEL ENCABEZADO (HERO)
+   ========================================== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Degradado profesional */
+    color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header .autor {
+    font-size: 1rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL Y TARJETAS
+   ========================================== */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: transform 0.2s;
+}
+
+/* Efecto sutil al pasar el mouse en computadoras */
+/* Esto hará que en pantallas medianas y grandes se vea en dos columnas como un panel de control */
+@media (min-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos columnas iguales */
+    }
+    
+    /* Hacemos que las dos primeras tarjetas de texto ocupen todo el ancho arriba */
+    .tarjeta:nth-child(1), .tarjeta:nth-child(2) {
+        grid-column: span 2;
+    }
+}
+
+.tarjeta h2 {
+    color: #1a365d;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    border-left: 4px solid #3182ce; /* Línea decorativa azul */
+    padding-left: 10px;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* ==========================================
+   SECCIÓN DEL FORMULARIO
+   ========================================== */
+.formulario-seccion {
+    background: #ebf8ff; /* Fondo azul claro para destacar */
+    border: 1px solid #bee3f8;
+}
+
+#formularioFibo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#formularioFibo label {
+    font-weight: 600;
+    color: #2b6cb0;
+}
+
+#formularioFibo input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#formularioFibo input:focus {
+    border-color: #3182ce; /* Cambia a azul cuando haces clic */
+}
+
+#formularioFibo button {
+    background-color: #3182ce;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#formularioFibo button:hover {
+    background-color: #2b6cb0;
+}
+
+/* ==========================================
+   SECCIÓN DE RESULTADOS (INYECCIÓN DE JS)
+   ========================================== */
+.resultado-seccion {
+    border-top: 4px solid #48bb78; /* Línea verde de éxito */
+}
+
+.placeholder-texto {
+    color: #718096;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Estilos de la lista que genera JavaScript */
+.lista-fibo {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-fibo li {
+    background: #f7fafc;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #4a5568;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-fibo li strong {
+    color: #2d3748;
+    min-width: 130px;
+}
+
+.lista-fibo li span {
+    background: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.lista-fibo li small {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.conclusion-corta {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0fff4;
+    border: 1px solid #c6f6d5;
+    border-radius: 8px;
+    color: #22543d;
+}
+
+/* ==========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.enlaces-git {
+    margin-top: 15px;
+}
+
+.btn-git {
+    display: inline-block;
+    background-color: #2d3748;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-git:hover {
+    background-color: #1a202c;
+}
+
+/* ==========================================
+   RESPONSIVIDAD (PANTALLAS CHICAS)
+   ========================================== */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tarjeta {
+        padding: 15px;
+    }
+
+    .lista-fibo li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .lista-fibo li strong {
+        min-width: auto;
+    }
+}
+/* Nuevo contenedor que agrupa las dos grandes columnas */
+.contenedor-grid {
+    max-width: 1200px; /* Un poco más ancho para albergar ambas columnas cómodamente */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Estilos específicos para el manejo de imágenes en la barra informativa */
+.contenedor-imagen {
+    margin-top: 15px;
+    text-align: center;
+    background: #f7fafc;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e0;
+}
+
+.img-fluida {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.pie-imagen {
+    font-size: 0.85rem !important;
+    color: #718096;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* ==========================================
+   REGLA DE DOS COLUMNAS EN COMPUTADORAS
+   ========================================== */
+@media (min-width: 850px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr; /* Columna derecha un poco más ancha para la calculadora */
+        align-items: start;
+    }
+}

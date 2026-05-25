@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibo-Architect | Proporciones Armónicas</title>
+    <link rel="stylesheet" href="css/estilosf.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fibo-Architect (PROY FIBONNACCI)</h1>
+        <p class="autor">Desarrollado por: <strong>Eydan Dilan Villca Prado</strong></p>
+    </header>
+
+    <main class="contenedor-grid">
+        
+        <aside class="columna-izquierda">
+            
+            <section class="tarjeta">
+                <h2>¿Qué es Fibo-Architect?</h2>
+                <p>
+                    Es una herramienta que fusiona las matemáticas de la naturaleza con el desarrollo web y la composición espacial. Ayuda a eliminar el diseño "al azar" calculando proporciones estructurales óptimas basadas en la Sucesión de Fibonacci.
+                </p>
+                <h3>Fundamento Matemático: La Sucesión de Fibonacci y el Número Áureo</h3>
+                <p>
+                    Cuando construimos cuadrados con las medidas de Fibonacci y unimos sus esquinas, se genera la famosa <strong>Espiral Dorada</strong>. Esta forma geométrica dicta el equilibrio visual inconsciente del ojo humano.
+                </p>
+                <div class="contenedor-imagen">
+                    <img src="imágenes FN/fórmula.png" alt="Fórmula Fibo" class="img-fluida">
+                    <p class="pie-imagen">Con los valores iniciales F=0 y F=1. Esto genera la secuencia: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...</p>
+                </div>
+            </section>
+
+            <section class="tarjeta">
+                <h2>La Proporción Áurea en el Diseño</h2>
+                <p>
+                    Cuando construimos cuadrados con las medidas de Fibonacci y unimos sus esquinas, se genera la famosa <strong>Espiral Dorada</strong>. Esta forma geométrica dicta el equilibrio visual inconsciente del ojo humano.
+                </p>
+                <div class="contenedor-imagen">
+                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80" alt="Espiral de Fibonacci en la naturaleza y diseño" class="img-fluida">
+                    <p class="pie-imagen">Espiral Dorada aplicada al equilibrio compositivo.</p>
+                </div>
+            </section>
+
+            <section class="tarjeta">
+                <h2>Aplicación en el Mundo Profesional</h2>
+                <p>
+                    Disciplinas como el <strong>Diseño UX/UI</strong>, la <strong>Arquitectura</strong> y el <strong>Branding</strong> utilizan esta escala. Marcas globales icónicas (como Apple o Twitter/X) estructuran sus logotipos e interfaces siguiendo estas mismas proporciones para garantizar composiciones perfectas.
+                </p>
+            </section>
+
+        </aside>
+
+        <section class="columna-derecha">
+
+            <section class="tarjeta">
+                <h2>El Problema del Diseño Desproporcionado</h2>
+                <p>
+                    En el diseño de interfaces, crear elementos con medidas arbitrarias suele generar entornos caóticos o incómodos a la vista. Esta sección te ayuda a maquetar de forma armónica y balanceada.
+                </p>
+            </section>
+
+            <section class="tarjeta formulario-seccion">
+                <h2>Calculadora de Bloques Armónicos</h2>
+                <form id="formularioFibo" onsubmit="return false;">
+                    <label for="medidaBase">Ingresa el tamaño base de tu lienzo (en píxeles):</label>
+                    <input type="number" id="medidaBase" placeholder="Ej. 1000" required min="1">
+                    <button type="button" onclick="calcularEspaciosFibo()">Generar Medidas Proporcionales</button>
+                </form>
+            </section>
+
+            <section class="tarjeta resultado-seccion">
+                <h2>Medidas Recomendadas para tu Layout</h2>
+                <div id="resultado">
+                    <p class="placeholder-texto">Introduce una medida arriba para calcular las proporciones de diseño.</p>
+                </div>
+            </section>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Desafío Web - Matemáticas en el Mundo Real (FIBONNACCI)</p>
+        <div class="enlaces-git">
+            <a href="https://github.com/Dilanterogg/PROY-UMSA.git" target="_blank" class="btn-git">📂 Repositorio GitHub</a>
+        </div>
+        <div class="enlaces-git">
+            <a href="index.html" target="_self" class="btn-git">Para volver a la página principal</a>
+        </div>
+    </footer>
+
+    <script src="js/scriptf.js"></script>
+</body>
+</html>

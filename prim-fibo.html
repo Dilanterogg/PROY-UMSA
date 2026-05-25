@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibo-Pay | Tokenización Criptográfica Avanzada</title>
+    <link rel="stylesheet" href="css/estilospf.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fibo-Pay Secure Gateway (PROY FIBO Y PRIM)</h1>
+        <p class="autor">Módulo de Simulación Bancaria | Desarrollado por: <strong>Eydan Dilan Villca Prado</strong></p>
+    </header>
+
+    <main class="contenedor-grid">
+        
+        <aside class="columna-izquierda">
+            
+            <section class="tarjeta">
+                <h2>¿Qué es la Tokenización Financiera?</h2>
+                <p>
+                    Cuando realizas una transferencia o una compra en línea, los bancos nunca envían tus datos reales de tarjeta por el internet. En su lugar, generan un <strong>Token OTP (One-Time Password)</strong>, un código matemático de un solo uso que expira en minutos.
+                </p>
+            </section>
+
+            <section class="tarjeta">
+                <h2>El Secreto de las Llaves Fibo-Prime</h2>
+                <p>
+                    Los hackers usan software de inteligencia artificial para adivinar tokens bancarios comunes. Para evitarlo, <em>Fibo-Pay</em> implementa llaves de alta encriptación basadas únicamente en números que pertenezcan a la <strong>Sucesión de Fibonacci y que además sean Números Primos puros</strong>. Esto reduce la probabilidad de fraude a un 0.0001%.
+                </p>
+                <div class="contenedor-imagen">
+                    <img src="imágenes FN/tarjeta digital.jpg" alt="Tarjeta de crédito y seguridad digital de pagos" class="img-fluida">
+                    <p class="pie-imagen">Pasarela de pago protegida por tokens criptográficos duales.</p>
+                </div>
+            </section>
+
+            <section class="tarjeta">
+                <h2>Cumplimiento de Seguridad Bancaria</h2>
+                <p>
+                    Este prototipo demuestra cómo la combinación de dos disciplinas matemáticas abstractas (el crecimiento ordenado y la indivisibilidad) puede aplicarse directamente a la protección de activos financieros en la banca digital moderna.
+                </p>
+            </section>
+
+        </aside>
+
+        <section class="columna-derecha">
+
+            <section class="tarjeta">
+                <h2>Simulador de Transferencia Bancaria</h2>
+                <p>
+                    Para proceder con el pago seguro, ingresa el monto y la cantidad de bloques de verificación de seguridad que deseas que el sistema analice de fondo.
+                </p>
+            </section>
+
+            <section class="tarjeta formulario-seccion">
+                <h2>Panel de Transacción</h2>
+                <form id="formularioPago" onsubmit="return false;">
+                    
+                    <div class="grupo-formulario">
+                        <label for="montoPago">Monto a Transferir ($ USD):</label>
+                        <input type="number" id="montoPago" placeholder="Ej. 250" required min="1">
+                    </div>
+
+                    <div class="grupo-formulario" style="margin-top: 15px;">
+                        <label for="bloquesSeguridad">Nivel de Escaneo (Términos Fibo a buscar):</label>
+                        <input type="number" id="bloquesSeguridad" placeholder="Ej. 15" required min="1" max="22">
+                        <small class="ayuda-input">*Define cuántos números de Fibonacci evaluará el servidor bancario.</small>
+                    </div>
+
+                    <button type="button" onclick="procesarPagoSeguro()">Generar Token y Autorizar Pago</button>
+                </form>
+            </section>
+
+            <section class="tarjeta resultado-seccion">
+                <h2>Estado de la Transacción</h2>
+                <div id="resultado">
+                    <p class="placeholder-texto">Esperando parámetros de pago para iniciar el protocolo de encriptación...</p>
+                </div>
+            </section>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Desafío Web - Proyecto Fibo-Pay (Fibonacci + Primos Aplicados)</p>
+        <div class="enlaces-git">
+            <a href="https://github.com/Dilanterogg/PROY-UMSA.git" target="_blank" class="btn-git">📂 Repositorio GitHub</a>
+        </div>
+        <div class="enlaces-git">
+            <a href="index.html" target="_self" class="btn-git">Para volver a la página principal</a>
+        </div>
+    </footer>
+
+    <script src="js/scriptpf.js"></script>
+</body>
+</html>

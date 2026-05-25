@@ -1,0 +1,224 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL Y FUENTES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Fondo oscuro elegante */
+    color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   ENCABEZADO GLOBAL DEL PORTAL
+   ========================================== */
+.portal-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid #334155;
+}
+
+.portal-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.portal-header .subtitulo {
+    color: #94a3b8;
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.portal-header .autor {
+    color: #38bdf8;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   GRID DE 3 COLUMNAS DINÁMICAS (NÚCLEO VISTA)
+   ========================================== */
+.portal-grid {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna por defecto en móviles */
+    gap: 25px;
+    flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Estilo común para cada uno de los 3 apartados */
+.columna-proyecto {
+    background-color: #1e293b;
+    border-radius: 14px;
+    border: 1px solid #334155;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea el botón siempre al fondo */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto de elevación al pasar el ratón */
+@media (min-width: 900px) {
+    .columna-proyecto:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ==========================================
+   ELEMENTOS INTERNOS DE LAS TARJETAS
+   ========================================== */
+.proyecto-cabecera .categoria {
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.proyecto-cabecera h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.proyecto-cuerpo h3 {
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.proyecto-cuerpo p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.proyecto-cuerpo ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.proyecto-cuerpo li {
+    margin-bottom: 4px;
+}
+
+.proyecto-pie {
+    margin-top: 30px;
+}
+
+/* ==========================================
+   IDENTIDADES DE COLOR POR APARTADO
+   ========================================== */
+/* Fibo-Architect: Tonos Azules */
+.fibo-theme .categoria, .fibo-theme h2 { color: #38bdf8; }
+.fibo-theme { border-top: 4px solid #38bdf8; }
+.btn-fibo { background-color: #0284c7; }
+.btn-fibo:hover { background-color: #0369a1; box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); }
+
+/* Fibo-Pay: Tonos Morados/Violáceos */
+.combinado-theme .categoria, .combinado-theme h2 { color: #a78bfa; }
+.combinado-theme { border-top: 4px solid #a78bfa; }
+.btn-combinado { background-color: #7c3aed; }
+.btn-combinado:hover { background-color: #6d28d9; box-shadow: 0 0 15px rgba(167, 139, 250, 0.4); }
+
+/* Antivirus: Tonos Verdes/Esmeralda */
+.primos-theme .categoria, .primos-theme h2 { color: #34d399; }
+.primos-theme { border-top: 4px solid #34d399; }
+.btn-primos { background-color: #059669; }
+.btn-primos:hover { background-color: #047857; box-shadow: 0 0 15px rgba(52, 211, 153, 0.4); }
+
+/* ==========================================
+   BOTONES DEL PORTAL
+   ========================================== */
+.btn-portal {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+/* ==========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.portal-footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #334155;
+    color: #64748b;
+    font-size: 0.9rem;
+    background-color: #090d16;
+}
+
+.btn-git {
+    display: inline-block;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 12px;
+    border: 1px solid #334155;
+    transition: background-color 0.2s;
+}
+
+.btn-git:hover {
+    background-color: #334155;
+}
+
+/* ==========================================
+   REGLA DE TRES COLUMNAS EN ESCRITORIO
+   ========================================== */
+@media (min-width: 900px) {
+    .portal-grid {
+        grid-template-columns: repeat(3, 1fr); /* ¡Divide la pantalla exactamente en 3 secciones! */
+    }
+}
+/* ==========================================
+   ESTILOS PARA LAS IMÁGENES DEL PORTAL
+   ========================================== */
+.imagen-proyecto {
+    margin-top: 20px;
+    width: 100%;
+    height: 160px; /* Limita la altura para que las 3 columnas queden simétricas */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.imagen-proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    opacity: 0.75;     /* Combina mejor con el modo oscuro */
+    transition: opacity 0.3s ease;
+}
+
+/* Al pasar el mouse por encima de la columna, la imagen brilla al 100% */
+.columna-proyecto:hover .imagen-proyecto img {
+    opacity: 1;
+}
