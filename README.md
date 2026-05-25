@@ -1,1 +1,1 @@
-# PROY-UMSA
+# desafio-fibonacci-primos
